@@ -1,0 +1,85 @@
+<div class="container">
+    <div class="container">
+        <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span> Edycja</button>
+        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-floppy-disk"></span> Zapisz</button>
+        <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-floppy-disk"></span> Zapisz</button>
+        <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Usuń</button>
+        <button type="button" class="btn btn-link">Link</button>
+    </div>
+
+    <ul class="nav nav-tabs" id="myTab">
+        <li class="active"><a href="#summary" data-toggle="tab">Podsumowanie</a></li>
+        <li><a href="#basic-info" data-toggle="tab">Dane osobowe</a></li>
+        <li><a href="#data" data-toggle="tab">Wywiad</a></li>
+        <li><a href="#appointments" data-toggle="tab">Wizyty</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="summary">
+            <p>Imię Nazwisko</p>
+            <p>12345678912</p>
+            <p>2001-02-12</p>
+            <p>Ostatnia wizyta: 2013-07-06</p>
+        </div>
+        <div class="tab-pane" id="basic-info">
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="FirstName" class="col-md-3 control-label">Imię</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" id="FirstName">
+                    </div>
+                    <label for="LastName" class="col-md-3 control-label">Nazwisko</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" id="LastName">
+                    </div>
+                    <label for="pesel" class="col-md-3 control-label">PESEL</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" id="pesel">
+                    </div>
+                    <label for="birthdate" class="col-md-3 control-label">Rok urodzenia</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" id="birthdate">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="telephone" class="col-md-3 control-label">Nr telefonu</label>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" id="telephone">
+                    </div>
+                    <label for="email" class="col-md-3 control-label">E-mail</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="email">
+                    </div>                      
+                </div>
+            </div>
+            <div class="form-group">
+
+            </div>
+        </div>
+        <div class="tab-pane" id="data">
+            <div class="row">
+                <div class="col-md-9">
+                    <label for="right-eye" class="col-md-3 control-label">Prawe oko</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="right-eye">
+                    </div>   
+                    <label for="left-eye" class="col-md-3 control-label">Lewe oko</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="left-eye">
+                    </div>   
+                </div>
+                <div class="col-md-3">
+                    <div>
+                        <p>Multimedia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="appointments">...</div>
+    </div>
+    <script>
+        $(function() {
+            $('#myTab a:last').tab('show');
+        })
+    </script>
+</div>

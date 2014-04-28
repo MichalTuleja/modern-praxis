@@ -1,228 +1,41 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="ico/favicon.ico">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="ico/favicon.ico">
 
-    <title>Oculus</title>
+        <title>Oculus</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/navbar-fixed-top.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="css/navbar-fixed-top.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
+    <body>
+        <div id="navigation_bar" class="navbar navbar-default navbar-fixed-top" role="navigation"></div>
+        <div id="table_list" class="jumbotron"></div>    
+        <div id="patient_data" class="jumbotron"></div>
+        <div id="dashboard" class="jumbotron"></div>
+        <div id="search" class="jumbotron"></div>    
 
-  <body>
-
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Oculus</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-              <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Dashboard</a></li>
-              <li><a href="#about"><span class="glyphicon glyphicon-inbox"></span> Wizyta</a></li>
-            <li><a href="#about"><span class="glyphicon glyphicon-list"></span> Pacjenci</a></li>
-            <li><a href="#contact"><span class="glyphicon glyphicon-calendar"></span> Terminarz</a></li>
-            <li><a href="#contact"><span class="glyphicon glyphicon-file"></span> Raporty</a></li>
-           <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-book"></span> Dodatki <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Katalog ICD-9</a></li>
-                <li><a href="#">Katalog ICD-10</a></li>
-                <li><a href="#">Indeks leków</a></li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span> Administracja <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Konfiguracja bazy danych</a></li>
-                <li><a href="#">Konfiguracja drukarek</a></li>
-                <li><a href="#">Konfiguracja użytkowników</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Informacje o serwerze</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Michał Tuleja <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Informacje</a></li>
-                <li><a href="#">Ustawienia</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Wyloguj</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Wprowadź tekst...">
-              <span class="input-group-btn">
-                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search"></span> Szukaj</button>
-              </span>
-            </div><!-- /input-group -->
-          </div><!-- /.col-lg-6 -->
-        </div><!-- /.row -->
-      </div>
-    </div>
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h2>Dashboard</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <p>Zapisanych wizyt na dzisiaj: 12</p>
-                <p><a class="btn btn-primary btn" role="button">Przejdź do terminarza &raquo;</a></p>
-            </div>
-            <div class="col-md-4">
-                <p>Liczba pacjentów w bazie: 3124</p>
-                <p><a class="btn btn-primary btn" role="button">Pacjenci &raquo;</a></p>
-            </div>
-        </div>
-        <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Dodaj</button>
-      </div>
-    </div>
-
-    <div class="jumbotron">
-      <div class="container">
-        <table class="table table-condensed">
-            <tr class="active"><td>Col1</td><td>Col2</td></tr>
-            <tr class="success"><td>Col1</td><td>Col2</td></tr>
-            <tr class="warning"><td>Col1</td><td>Col2</td></tr>
-            <tr class="danger"><td>Col1</td><td>Col2</td></tr>
-            <tr class="info"><td>Col1</td><td>Col2</td></tr>
-        </table>
-      </div>
-    </div>    
-
-    <div class="jumbotron">
-      <div class="container">
-          <div class="container">
-            <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span> Edycja</button>
-            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-floppy-disk"></span> Zapisz</button>
-            <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-floppy-disk"></span> Zapisz</button>
-            <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Usuń</button>
-            <button type="button" class="btn btn-link">Link</button>
-          </div>
-
-        <ul class="nav nav-tabs" id="myTab">
-          <li class="active"><a href="#summary" data-toggle="tab">Podsumowanie</a></li>
-          <li><a href="#basic-info" data-toggle="tab">Dane osobowe</a></li>
-          <li><a href="#data" data-toggle="tab">Wywiad</a></li>
-          <li><a href="#appointments" data-toggle="tab">Wizyty</a></li>
-        </ul>
-
-        <div class="tab-content">
-          <div class="tab-pane active" id="summary">
-              <p>Imię Nazwisko</p>
-              <p>12345678912</p>
-              <p>2001-02-12</p>
-              <p>Ostatnia wizyta: 2013-07-06</p>
-          </div>
-          <div class="tab-pane" id="basic-info">
-              <div class="row">
-                  <div class="col-md-6">
-                    <label for="FirstName" class="col-md-3 control-label">Imię</label>
-                    <div class="col-md-9">
-                      <input type="text" class="form-control" id="FirstName">
-                    </div>
-                    <label for="LastName" class="col-md-3 control-label">Nazwisko</label>
-                    <div class="col-md-9">
-                      <input type="text" class="form-control" id="LastName">
-                    </div>
-                    <label for="pesel" class="col-md-3 control-label">PESEL</label>
-                    <div class="col-md-9">
-                      <input type="text" class="form-control" id="pesel">
-                    </div>
-                    <label for="birthdate" class="col-md-3 control-label">Rok urodzenia</label>
-                    <div class="col-md-9">
-                      <input type="text" class="form-control" id="birthdate">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="telephone" class="col-md-3 control-label">Nr telefonu</label>
-                    <div class="col-md-3">
-                      <input type="text" class="form-control" id="telephone">
-                    </div>
-                    <label for="email" class="col-md-3 control-label">E-mail</label>
-                    <div class="col-md-4">
-                      <input type="text" class="form-control" id="email">
-                    </div>                      
-                  </div>
-              </div>
-            <div class="form-group">
-
-            </div>
-          </div>
-          <div class="tab-pane" id="data">
-                <div class="row">
-                    <div class="col-md-9">
-                        <label for="right-eye" class="col-md-3 control-label">Prawe oko</label>
-                        <div class="col-md-4">
-                          <input type="text" class="form-control" id="right-eye">
-                        </div>   
-                        <label for="left-eye" class="col-md-3 control-label">Lewe oko</label>
-                        <div class="col-md-4">
-                          <input type="text" class="form-control" id="left-eye">
-                        </div>   
-                    </div>
-                    <div class="col-md-3">
-                        <div>
-                            <p>Multimedia</p>
-                        </div>
-                    </div>
-                </div>
-          </div>
-          <div class="tab-pane" id="appointments">...</div>
-        </div>
-    </div>
-
-
-        <script>
-          $(function () {
-            $('#myTab a:last').tab('show');
-          })
-        </script>
-      </div>
-    
-    
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/template.js"></script>
+        <script src="js/app.js"></script>
+    </body>
 </html>
