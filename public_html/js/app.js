@@ -63,7 +63,7 @@ var Router = Backbone.Router.extend({
         "search/:query": "search",
         "search/:query/p:page": "search",
         "dashboard": "dashboard",
-        "*path": "dashboard",
+        "*path": "dashboard"
     },
     help: function() {
         switchTo('dashboard');
