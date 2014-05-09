@@ -1,0 +1,15 @@
+/* 
+    Document   : custom
+    Created on : 09.05.2014, 23:41:11
+    Author     : Michal Tuleja <michal.tuleja@outlook.com>
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+div#main_container {
+    border: 1px solid none;
+}
