@@ -9,7 +9,8 @@ var templates = [['dashboard.html', 'dashboard'],
     ['patient_data.html', 'patient_data'],
     ['search.html', 'search'],
     ['table_list.html', 'table_list'],
-    ['calendar.html', 'calendar']];
+    ['calendar.html', 'calendar'],
+    ['report.html', 'report']];
 
 var promises = [];
 
@@ -19,7 +20,7 @@ for (var i = 0; i < templates.length; i++) {
 
 var app = {};
 
-
+var counter = 1;
 
 
 
@@ -29,7 +30,16 @@ $.when.apply($, promises).then(function() {
     app.Router = new Router();
     Backbone.history.start();
     
-    //switchTo('dashboard');
+    $("#search-field").on('keyup', function() {
+        if(counter == 1) {
+            $('#dropdown-search').dropdown('toggle');    
+        }
+        
+        counter++;
+        $('#search-results').html('Wyniki wyszukiwania dla frazy ' + $(this).val());
+    }).on('hide.bs.dropdown', function() {
+        counter = 1;
+    });
 });
 
 
@@ -82,7 +92,7 @@ var Router = Backbone.Router.extend({
         switchTo('calendar');
     },
     report: function() {
-        switchTo('table_list');
+        switchTo('report');
     },
     catalog: function() {
         switchTo('table_list');
@@ -95,4 +105,12 @@ var Router = Backbone.Router.extend({
     }
 });
 
+if(typeof webkitSpeechRecognition !== undefined) {
+    var recognition = new webkitSpeechRecognition();
+    recognition.onresult = function(event) { 
+      console.log(event); 
+    };
+    
+    recognition.start();    
+}
 
