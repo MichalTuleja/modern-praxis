@@ -21,6 +21,9 @@
                     <p>12345678912</p>
                     <p>2001-02-12</p>
                     <p>Ostatnia wizyta: 2013-07-06</p>
+                    <p>Multimedia, zobacz więcej...</p>
+                    <p>Ostatni wywiad</p>
+                    <p>Liczba wizyt</p>
                 </div>
                 <div class="tab-pane active" id="basic-info">
                     <div class="row">
@@ -37,6 +40,7 @@
                             <div class="col-md-9">
                                 <input type="text" class="form-control" id="pesel">
                             </div>
+                            <label>Numer ubezpieczenia</label>
                             <label for="birthdate" class="col-md-3 control-label">Rok urodzenia</label>
                             <div class="col-md-9">
                                 <input type="text" class="form-control" id="birthdate">
@@ -53,6 +57,13 @@
                             </div>                      
                         </div>
                     </div>
+                    <!-- 
+                    TODO: dopisać wywiad, wizyty 
+                    listwa z boku z kolejnymi wizytami,
+                    podsumowanie zbiera dane
+                    zaimplementować diff??
+                    
+                    -->
                     <div class="form-group">
 
                     </div>
@@ -78,15 +89,6 @@
                 </div>
                 <div class="tab-pane" id="appointments">...</div>
             </div>
-            <script>
-                $('#myTab a').click(function(e) {
-                    e.preventDefault()
-                    $(this).tab('show');
-                })
-                $(function() {
-                    $('#myTab li:eq(1) a').tab('show');
-                })
-            </script>
         </div>
     </div>
 </div>

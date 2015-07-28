@@ -6,7 +6,6 @@ loginModule.controller('LoginCtrl', ['$rootScope', '$scope', '$location', '$rout
     $scope.username = '';
     $scope.password = '';
     
-    
     $scope.login = function(formData) {
         var data = JSON.stringify({username: formData.username, password: formData.password});
         $http.post('/api/login', data).

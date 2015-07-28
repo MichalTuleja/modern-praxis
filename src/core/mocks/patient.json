@@ -1,0 +1,31 @@
+{
+    "firstName": "Frank",
+    "lastName": "Smith",
+    "dateOfBirth": "1987-03-12",
+    "citizenship": "Polish",
+    "passportNumber": "1232134532",
+    "insuranceNumber": "32145451",
+    "remarks": "",
+    "visits": [
+        {
+            "ctime": "",
+            "mtime": "",
+            "date": "",
+            "visitModule": "opthtalmology",
+            "rightEye": "",
+            "leftEye": "",
+            "PD": "",
+            "multimedia": []
+        },
+        {
+            "ctime": "",
+            "mtime": "",
+            "date": "",
+            "visitModule": "opthtalmology",
+            "rightEye": "",
+            "leftEye": "",
+            "PD": "",
+            "multimedia": []
+        }
+    ]
+}

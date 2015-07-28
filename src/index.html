@@ -38,6 +38,11 @@
             <div ng-include src="template.url"></div>
         </div>
         
+        <div ng-controller="SearchCtrl">
+            <div ng-include src="templates.searchBox"></div>
+        </div>
+        
+        
         <div ng-view></div>
 
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -46,7 +51,9 @@
         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="core/components/login/LoginCtrl.js"></script>
         <script src="core/components/navbar/NavbarCtrl.js"></script>
+        <script src="core/components/search/SearchCtrl.js"></script>
         <script src="modules/dashboard/DashboardCtrl.js"></script>
+        <script src="modules/visit_summary/VisitSummaryCtrl.js"></script>
         <script src="core/app.js"></script>
     </body>
 </html>
