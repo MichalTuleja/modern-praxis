@@ -13,8 +13,9 @@ var databaseApp = angular.module('ngApp',
         'loginModule',
         'navbarModule',
         'dashboardModule',
-        'visitSummaryModule',
-        'searchModule'
+        'searchModule',
+        'patientSummaryModule',
+        'patientBasicDataModule'
     ]);
 
 databaseApp.config(function ($routeProvider, $locationProvider) {

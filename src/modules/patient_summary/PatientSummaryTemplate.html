@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <ul class="list-inline">
+                <li>
+                    <h3>{{patient.firstName}} {{patient.lastName}}</h3>
+                </li>
+                <li>
+                    <small>{{patient.dateOfBirth}}</small>
+                </li>
+
+            </ul>
+        </div>
+        <div class="col-sm-6">
+            <ul class="list-inline pull-right">
+                <li>
+                    <h3>&nbsp</h3>
+                </li>
+                <li>
+                    <small>
+                        {{patient.phoneNumber}} <span style="color:#ddd">|</span> {{patient.email}} <span style="color:#ddd">|</span> <a href="#/patient/1/basic_data">Edit</a>
+                    </small>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    <hr style="margin-top: 0px;" />
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            PESEL: {{patient.passportNumber}}<br/>
+            
+        </div>
+        <div class="col-sm-6">
+            Nr ubezpieczenia: {{patient.insuranceNumber}}
+        </div>
+    </div>
+</div>
+<!-- 
+TODO: dopisać wywiad, wizyty 
+listwa z boku z kolejnymi wizytami,
+podsumowanie zbiera dane
+zaimplementować diff??
+
+-->
+
+<div class="container" style="margin-top:40px">
+    <div class="container row" ng-repeat="visit in patient.visits track by $index">
+        <h4>Wizyta {{visit.date}} - {{visit.module}}</h4>
+        <hr style="margin-top: 0px;" />
+        <p>Prawe oko: {{visit.rightEye}}, Lewe oko: {{visit.leftEye}}</p>
+        <p>{{visit.description}}</p>
+    </div>
+    
+</div>

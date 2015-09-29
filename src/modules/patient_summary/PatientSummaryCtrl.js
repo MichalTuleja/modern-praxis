@@ -1,20 +1,19 @@
-var visitSummaryModule = angular.module('visitSummaryModule', []);
+var patientSummaryModule = angular.module('patientSummaryModule', []);
 
-visitSummaryModule.config(
+patientSummaryModule.config(
         function ($routeProvider, $locationProvider) {
             $routeProvider
                     .when('/patient/:id/summary', {
-                        templateUrl: 'modules/visit_summary/VisitSummaryTemplate.html',
-                        controller: 'VisitSummaryCtrl'
+                        templateUrl: 'modules/patient_summary/PatientSummaryTemplate.html',
+                        controller: 'PatientSummaryCtrl'
                     });
         });
 
-visitSummaryModule.controller(
-        'VisitSummaryCtrl', ['$scope', '$http',
+patientSummaryModule.controller(
+        'PatientSummaryCtrl', ['$scope', '$http',
             function ($scope, $http) {
 
                 $http.get('core/mocks/patient.json').success(function (data) {
                     $scope.patient = data;
                 });
             }]);
-
