@@ -1,0 +1,24 @@
+{
+  "name": "moder-praxis-backend",
+  "version": "0.0.1",
+  "description": "Node.js backend for modern praxis",
+  "author": "Michal Tuleja <michal.tuleja@outlook.com>0",
+  "main": "src/server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MichalTuleja/modern-praxis.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MichalTuleja/modern-praxis.git/issues"
+  },
+  "keywords": [
+    "medical"
+  ],
+  "dependencies": {
+    "express": "^4.13.3",
+    "hapi": "^10.1.0",
+    "inert": "^3.0.1"
+  },
+  "devDependencies": {},
+  "license": "GPL v2"
+}
