@@ -103,3 +103,17 @@ body {
   display: inline-block;
   border-radius: 50%;
 }
+
+.tile {
+  text-align: center;
+}
+
+.tile > div {
+  margin: 5px;
+  height: 150px;
+}
+
+.tile > div:hover {
+  background-color: #eeeecc;
+  cursor: pointer;
+}

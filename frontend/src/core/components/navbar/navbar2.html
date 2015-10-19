@@ -1,20 +1,50 @@
 <nav class="navbar navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">Oculus app</a>
+    <div class="container" style="background-color:white">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/#/dashboard">modern-praxis</a>
+            <ul class="nav navbar-nav">
+                <li><a href="/#/patient/1/basic_data"><span class="glyphicon glyphicon-plus"></span></a></li>
+            </ul>
+            <form class="navbar-form navbar-right hidden-xs" ng-submit="doSearch()">
+                <input type="text" 
+                       id="searchInput" 
+                       class="form-control" 
+                       style="min-width:300px;" 
+                       ng-model="searchExpr.text" 
+                       placeholder="Search..." 
+                       typeahead="address for address in getLocation($viewValue)" 
+                       typeahead-loading="loadingLocations" 
+                       typeahead-no-results="noResults">
+                <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+                <div ng-show="noResults">
+                    <i class="glyphicon glyphicon-remove"></i> No Results Found
+                </div>
+            </form>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" title="Search history">
+                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-header" ng-show="searchHistory.length == 0"><a><i>(no recent searches)</i></a></li>
+                        <li class="dropdown-header" ng-show="searchHistory.length > 0">Recent searches</li>
+                        <li ng-repeat="item in searchHistory track by $index" ng-show="searchHistory.length > 0"><a href="#/patient/1/summary">{{ item.appName }}</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#/calendar/month" title="Calendar"><span class="glyphicon glyphicon-calendar"></span></a></li>
+                <li><a href="" ng-click="showDictionaryModal()" title="Knowledge base"><span class="glyphicon glyphicon-book"></span></a></li>
+                <li><a href="/#/login" title="Logoff"><span class="glyphicon glyphicon-off"></span></a></li>
+            </ul>
+        </div>
     </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/#/dashboard">Dashboard</a></li>
-        <li><a href="/#/patient/1/summary">Patient data</a></li>
-        <li><a href="/#/login">Login</a></li>
-      </ul>
-    </div><!-- /.nav-collapse -->
-  </div><!-- /.container -->
-</nav><!-- /.navbar -->
+</nav>

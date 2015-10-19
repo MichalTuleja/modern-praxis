@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10">
+            <h3>Search results for {{ searchExpr }}</h3>
+            <div class="list-group">
+                <a ng-repeat="e in events.data track by $index" href="/#{{ e.url }}" class="list-group-item">
+                    <strong>{{ e.title }}</strong> <small>(23.04.1976)<br/>
+                    <small>76042305752</small><br/>
+                    <span style="color: grey">+48 504 111 458</span></small>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

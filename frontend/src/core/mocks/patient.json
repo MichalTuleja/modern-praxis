@@ -1,12 +1,12 @@
 {
-    "firstName": "Frank",
-    "lastName": "Smith",
-    "dateOfBirth": "1987-03-12",
+    "firstName": "Jan",
+    "lastName": "Nowak",
+    "dateOfBirth": "1976-04-23",
     "citizenship": "Polish",
     "passportNumber": "1232134532",
     "insuranceNumber": "32145451",
     "phoneNumber": "+48123456789",
-    "email": "frank.smith@example.com",
+    "email": "jan.nowak@example.com",
     "remarks": "",
     "visits": [
         {
@@ -17,7 +17,7 @@
             "rightEye": "+0.75",
             "leftEye": "-1.75",
             "PD": "60",
-            "description": "Pacjent narzeka na ból lewego oka, oraz prawej nogi. Badanie wykazało brak gałki ocznej, oraz złamanie nogi.",
+            "description": "Badanie nie wykazały żadnych odchyleń od normy, wada refrakcji bez zmian.",
             "multimedia": []
         },
         {

@@ -1,3 +1,10 @@
+/*
+ * modern-praxis main server
+ *
+ * Created: 2015-09-03
+ * Author:  Michal Tuleja <michal.tuleja@outlook.com>
+ */
+
 var express = require('express');
 var app = express();
 
