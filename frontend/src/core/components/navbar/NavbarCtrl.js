@@ -2,21 +2,24 @@ var navbarModule = angular.module('navbarModule', []);
 
 
 
-navbarModule.controller('NavbarCtrl', ['$rootScope', '$scope', '$location', '$routeParams', '$http', '$modal',
-    function($rootScope, $scope, $location, $routeParams, $http, $modal) {
-        $scope.templates = [{
+navbarModule.controller('NavbarCtrl', ['$rootScope', '$scope', '$location', '$routeParams', '$http', '$modal', 'searchSvc',
+    function($rootScope, $scope, $location, $routeParams, $http, $modal, searchSvc) {
+        $scope.template = {
             name: 'template1.html',
             url: 'core/components/navbar/navbar.html'
-        }, {
-            name: 'template2.html',
-            url: 'core/components/navbar/navbar2.html'
-        }];
-
-        $scope.template = $scope.templates[1];
-
+        };
+        
         $scope.searchExpr = {
             text: '',
             pattern: ''
+        };
+        
+        $scope.popoverOpen = searchSvc.checkIfOpen();
+
+        searchSvc.bindFreeSearch();
+
+        $scope.openSearch = function() {
+            searchSvc.openModal();
         };
 
         $scope.searchHistory = [{
@@ -36,7 +39,7 @@ navbarModule.controller('NavbarCtrl', ['$rootScope', '$scope', '$location', '$ro
             }
         };
 
-        $scope.showDictionaryModal = function() {
+        $scope.newVisitModal = function() {
             var modalInstance = $modal.open({
                 animation: true,
                 templateUrl: '/modules/dictionary/dictionary.template.html',
@@ -52,21 +55,8 @@ navbarModule.controller('NavbarCtrl', ['$rootScope', '$scope', '$location', '$ro
             });
         };
 
-        $(document).keydown(function(e) {
-            //var checkWebkitandIE = (e.which == 26 ? 1 : 0);
-            //var checkMoz = (e.which == 122 ? 1 : 0);
-            console.log(e.which);
-
-            if($location.$$path.match('basic_data') == null) {
-                if($location.$$path.match('ophtalmology') == null) {
-                    $('#searchInput').focus();    
-                }
-            }
-        });
-
-        $scope.states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Dakota', 'North Carolina', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
-
         $scope.getLocation = function(val) {
+            /*
             return $http.get('//maps.googleapis.com/maps/api/geocode/json', {
                 params: {
                     address: val,
@@ -76,7 +66,12 @@ navbarModule.controller('NavbarCtrl', ['$rootScope', '$scope', '$location', '$ro
                 return response.data.results.map(function(item) {
                     return item.formatted_address;
                 });
-            });
+            }); */
+            
+            return {
+                    address: $scope.searchHistory,
+                    sensor: false
+                };
         };
     }
 ]);

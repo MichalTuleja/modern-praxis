@@ -6,7 +6,7 @@ patientBasicDataModule.config(
     function($routeProvider, $locationProvider) {
         $routeProvider
             .when('/patient/:id/ophtalmology', {
-                templateUrl: 'modules/visit_ophtalmology/visitOphtalmology.template.html',
+                templateUrl: 'modules/visit_ophtalmology/visitOphtalmologyMain.template.html',
                 controller: 'VisitOphtalmologyCtrl'
             });
     });
@@ -20,7 +20,7 @@ patientBasicDataModule.controller(
             });
 
             $scope.doSave = function() {
-                $location.path('/patient/1/summary');
+                //$location.path('/patient/1/summary');
             };
 
             $scope.dropzoneConfig = {

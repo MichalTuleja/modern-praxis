@@ -1,0 +1,32 @@
+<div class="modal-header">
+    <form class="">
+    <input type="text" 
+           id="searchInput" 
+           class="form-control" 
+           style="min-width:300px;" 
+           ng-model="searchExpr" 
+           placeholder="Search..." 
+           focus-me="focusInput">
+    <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+    <div ng-show="noResults">
+        <i class="glyphicon glyphicon-remove"></i> No Results Found
+    </div>
+</form>
+</div>
+<div class="modal-body">
+    <div style="overflow:hidden">
+        <ul class="list-unstyled">
+            <li ng-repeat="e in events.data track by $index" >
+                <a href="/#{{ e.url }}" class="list-group-item">
+                    <strong>{{ e.title }}</strong> <small>(23.04.1976)<br/>
+                    <small>76042305752</small><br/>
+                    <span style="color: grey">+48 504 111 458</span></small>
+                </a>
+            </li>
+        </ul>        
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+</div>

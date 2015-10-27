@@ -1,13 +1,14 @@
-<div class="container">
+<div class="container" style="padding-top:20px;">
 
-    <div class="jumbotron" ng-if="true">
+    <div class="jumbotron" ng-if="false">
         <p>To search among your data, just start typing. You can also use the searchbox. To start a new visit cick the plus (<span class="glyphicon glyphicon-plus"></span>) button above.</p>
     </div>
 
     <div class="row row-offcanvas row-offcanvas-right" ng-repeat="tileRow in tiles">
-        <div class="col-sm-4 tile" ng-repeat="tile in tileRow">
-            <div style="background-color: {{ tile.backgroundColor }};" ng-click="gotoUrl(tile.url)" title="{{ tile.title }}">
-                <h2><span class="glyphicon {{ tile.icon }}" style="margin-top:50px;font-size:40px;"></span></h2>
+        <div class="col-xs-6 tile" ng-repeat="tile in tileRow">
+            <div ng-click="tile.url === null ? doAction(tile.click) : gotoUrl(tile.url, tile.click)">
+                <h2><span class="glyphicon {{ tile.icon }}" style="margin-top:65px;font-size:40px;"></span></h2>
+                <p><i>{{ tile.title }}</i></p>
             </div>
         </div>
     </div>

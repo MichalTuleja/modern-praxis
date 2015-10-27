@@ -4,7 +4,7 @@ patientSummaryModule.config(
         function ($routeProvider, $locationProvider) {
             $routeProvider
                     .when('/patient/:id/summary', {
-                        templateUrl: 'modules/patient_summary/PatientSummaryTemplate.html',
+                        templateUrl: 'modules/patient_summary/patientSummaryMain.template.html',
                         controller: 'PatientSummaryCtrl'
                     });
         });

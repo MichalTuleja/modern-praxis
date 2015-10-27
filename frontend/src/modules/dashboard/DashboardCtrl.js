@@ -2,8 +2,16 @@
 
 var dashboardModule = angular.module('dashboardModule', []);
 
-dashboardModule.controller('DashboardCtrl', ['$scope', '$location',
-    function($scope, $location) {
+dashboardModule.config(function($routeProvider, $locationProvider) {
+    $routeProvider
+        .when('/dashboard', {
+            templateUrl: 'modules/dashboard/dashboard2.template.html',
+            controller: 'DashboardCtrl'
+        })
+});
+
+dashboardModule.controller('DashboardCtrl', ['$scope', '$location', '$timeout', 'searchSvc', 
+    function($scope, $location, $timeout, searchSvc) {
         $scope.events = {
             data: [
 
@@ -37,49 +45,57 @@ dashboardModule.controller('DashboardCtrl', ['$scope', '$location',
 
         $scope.tiles = [
             [{
-                backgroundColor: '#eeeeee',
+                backgroundColor: '#337ab7',
                 icon: 'glyphicon-plus',
                 url: '/patient/1/basic_data',
-                title: 'Add visit'
+                title: 'Start visit'
             }, {
-                backgroundColor: '#eeeeee',
-                icon: 'glyphicon-search',
-                url: '/calendar',
-                title: 'Search'
-            }, {
-                backgroundColor: '#eeeeee',
+                backgroundColor: '#337ab7',
                 icon: 'glyphicon-calendar',
                 url: '/calendar',
                 title: 'Calendar'
             }],
             [{
-                backgroundColor: '#eeeeee',
-                icon: 'glyphicon-inbox',
-                url: '/reports',
-                title: 'Reports'
+                backgroundColor: '#337ab7',
+                icon: 'glyphicon-search',
+                url: null,
+                title: 'Search',
+                click: 'startSearch'
             }, {
-                backgroundColor: '#eeeeee',
-                icon: 'glyphicon-book',
-                url: '/dashboard/knowledge_base',
-                title: 'Knowledge base'
-            }, {
-                backgroundColor: '#eeeeee',
+                backgroundColor: '#337ab7',
                 icon: 'glyphicon-cog',
-                url: '/calendar',
+                url: '',
                 title: 'Settings'
             }]
         ];
 
-        $scope.gotoUrl = function(url) {
-            $location.path(url);
+        $scope.gotoUrl = function(url, fn) {
+            if(url === '') {
+                fn();
+            }
+            else {
+                $location.path(url);
+            }
         };
 
         $scope.onKeypress = function() {
             console.log('keypress');
         };
 
+        $scope.startSearch = function() {
 
+            var si = $('#searchInput');
+
+            si.focus();
+
+            si.trigger('show');
+            $timeout(function () {
+                si.trigger('hide');
+            }, 3000);
+        };
         
-        
+        $scope.doAction = function(fn) {
+            eval('$scope.' + fn +'()');
+        };
     }
 ]);

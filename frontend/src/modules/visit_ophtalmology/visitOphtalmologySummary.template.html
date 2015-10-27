@@ -1,0 +1,7 @@
+<div class="container row" ng-repeat="visit in patient.visits track by $index" ng-show="$index==0">
+    <h4>Wizyta {{visit.date}}</h4>
+
+    <p>Prawe oko: {{visit.rightEye}}, Lewe oko: {{visit.leftEye}}</p>
+    <p>{{visit.description}}</p>
+
+</div>

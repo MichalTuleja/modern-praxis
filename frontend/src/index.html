@@ -38,7 +38,7 @@
         <link rel="apple-touch-icon" sizes="152x152" href="core/common/img/apple-touch-icon-152x152.png" />
     </head>
 
-    <body ng-keypress="console.log('keypress')">
+    <body>
          <div ng-controller="NavbarCtrl">
             <div ng-include src="template.url"></div>
         </div>
@@ -62,12 +62,15 @@
         <script src="core/components/navbar/NavbarCtrl.js"></script>
         <script src="core/components/footer/FooterCtrl.js"></script>
         <script src="core/components/search/SearchCtrl.js"></script>
+        <script src="core/components/search/SearchSvc.js"></script>
         <script src="modules/dictionary/DictionaryCtrl.js"></script>
         <script src="modules/dashboard/DashboardCtrl.js"></script>
         <script src="modules/calendar/CalendarCtrl.js"></script>
+        <script src="modules/reports/ReportIndexCtrl.js"></script>
         <script src="modules/patient_basic_data/PatientBasicDataCtrl.js"></script>
         <script src="modules/patient_summary/PatientSummaryCtrl.js"></script>
         <script src="vendor/ui-bootstrap-tpls-0.13.3.js"></script>
+        <script src="vendor/ui-bootstrap-tableft-0.12.1.js"></script>
         <script src="modules/visit_ophtalmology/visitOphtalmologyCtrl.js"></script>
         <script src="core/app.js"></script>
     </body>

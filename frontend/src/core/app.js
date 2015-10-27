@@ -11,6 +11,7 @@
 var databaseApp = angular.module('ngApp', [
     'ngRoute',
     'ui.bootstrap',
+    'ui.bootstrap.tabsleft',
     //'ngDropzone',
     'mwl.calendar',
     'loginModule',
@@ -22,7 +23,9 @@ var databaseApp = angular.module('ngApp', [
     'dictionaryModule',
     'patientSummaryModule',
     'patientBasicDataModule',
-    'visitOphtalmologyModule'
+    'visitOphtalmologyModule',
+    'reportIndexModule',
+    'searchSvcModule'
 ]);
 
 databaseApp.config(function($routeProvider, $locationProvider) {
@@ -65,3 +68,26 @@ databaseApp.directive('focus',
         };
     }
 );
+
+databaseApp.directive('focusMe', function($timeout) {
+  return {
+    link: function(scope, element, attrs) {
+      scope.$watch(attrs.focusMe, function(value) {
+        if(value === true) { 
+          console.log('value=',value);
+          //$timeout(function() {
+            element[0].focus();
+            scope[attrs.focusMe] = false;
+          //});
+        }
+      });
+    }
+  };
+});
+
+// define additional triggers on Tooltip and Popover
+databaseApp.config(['$tooltipProvider', function($tooltipProvider){
+    $tooltipProvider.setTriggers({
+        'show': 'hide'
+    });
+}]);

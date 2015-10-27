@@ -18,5 +18,10 @@
                 </div>
             </div>
         </div>
+        <h2>Configured reports</h2>
+        <p>Click on the list below to generate report.</p>
+        <div class="list-group">
+            <a ng-repeat="e in events.data track by $index" href="/#{{ e.url }}" class="list-group-item"><small>{{ e.startsAt | date : 'HH:mm' }}</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>{{ e.title }}</strong> <small>(23.04.1976)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: grey">+48 504 111 458</span></small></a>
+        </div>
     </div>
 </div>

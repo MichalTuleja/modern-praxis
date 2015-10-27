@@ -8,6 +8,8 @@ dashboardModule.controller('DictionaryCtrl', function ($scope, $modalInstance) {
     item: $scope.items[0]
   };
 */
+
+
   $scope.ok = function () {
     //$modalInstance.close($scope.selected.item);
     $modalInstance.close();
