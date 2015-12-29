@@ -1,4 +1,4 @@
-var dashboardModule = angular.module('dictionaryModule', []);
+var dashboardModule = angular.module('modernPraxis.dictionary', []);
 
 dashboardModule.controller('DictionaryCtrl', function ($scope, $modalInstance) {
 

@@ -1,0 +1,25 @@
+<ng-include src="'modules/patientSummary/patientSummaryHeader.template.html'"></ng-include>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            PESEL: {{patient.passportNumber}}<br/>
+            
+        </div>
+        <div class="col-sm-6">
+            Nr ubezpieczenia: {{patient.insuranceNumber}}
+        </div>
+    </div>
+</div>
+
+<div class="container" style="margin-top:40px">
+    <div class="list-group">
+        <a ng-repeat="visit in patient.visits track by $index" href="/#/patient/1/ophtalmology" class="list-group-item">
+            <h4>Wizyta {{visit.date}}</h4>
+            
+            <div class=""><p>Prawe oko: {{visit.rightEye}}, Lewe oko: {{visit.leftEye}}</p>
+            <p>{{visit.description}}</p></div>
+            
+        </a>
+    </div>
+</div>

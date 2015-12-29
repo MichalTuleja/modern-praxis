@@ -1,6 +1,6 @@
 /*global angular*/
 
-var dashboardModule = angular.module('dashboardModule', []);
+var dashboardModule = angular.module('modernPraxis.dashboard', []);
 
 dashboardModule.config(function($routeProvider, $locationProvider) {
     $routeProvider

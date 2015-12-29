@@ -1,0 +1,23 @@
+<tabsetleft vertical="true" type="pills">
+
+    <tableft>
+        <tab-heading>
+            <span class="glyphicon glyphicon-plus"></span> <i>Dodaj notatkę</i>
+        </tab-heading>
+    </tableft>
+    <tableft>
+        <tab-heading>
+            <span class="glyphicon glyphicon-file"></span> Ogólny wywiad
+        </tab-heading>
+        <mp-textarea-expandable/>
+    </tableft>
+    <tableft>
+        <tab-heading>
+            <span class="glyphicon glyphicon-picture"></span> Multimedia
+        </tab-heading>
+        <form class="dropzone" method="post" enctype="multipart/form-data" ng-dropzone dropzone="dropzone" dropzone-config="dropzoneConfig">
+            <input name="file" type="file" multiple />
+        </form>
+    </tableft>
+
+</tabsetleft>

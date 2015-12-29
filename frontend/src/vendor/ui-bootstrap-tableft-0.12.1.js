@@ -169,10 +169,10 @@ angular.module("template/tabs/tab-left.html", []).run(["$templateCache", functio
 angular.module("template/tabs/tabset-left.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("template/tabs/tabset-left.html",
     "<div>\n" +
-    "<div class=\"col-sm-3\">\n" +
+    "<div class=\"col-sm-3\" style=\"margin:0;padding:0\">\n" +
     "  <ul class=\"nav nav-{{type || 'tabs'}}\" ng-class=\"{'nav-stacked': vertical, 'nav-justified': justified}\" ng-transclude></ul>\n" +
     "</div>\n" +
-    "<div class=\"col-sm-8 col-sm-offset-1\">\n" +
+    "<div class=\"col-sm-9\" style=\"margin:0;padding:0\">\n" +
     "  <div class=\"tab-content\">\n" +
     "    <div class=\"tab-pane\" \n" +
     "         ng-repeat=\"tab in tabs\" \n" +

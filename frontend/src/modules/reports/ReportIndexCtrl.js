@@ -1,6 +1,6 @@
 /* global angular */
 
-var reportIndexModule = angular.module('reportIndexModule', []);
+var reportIndexModule = angular.module('modernPraxis.reports', []);
 
 reportIndexModule.config(
     function($routeProvider, $locationProvider) {

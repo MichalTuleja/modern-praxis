@@ -1,6 +1,6 @@
-/*global angular,moment*/
+/*global angular, moment*/
 
-var dashboardModule = angular.module('calendarModule', []);
+var dashboardModule = angular.module('modernPraxis.calendar', ['mwl.calendar']);
 
 dashboardModule.config(function ($routeProvider) {
     $routeProvider

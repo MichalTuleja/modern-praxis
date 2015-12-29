@@ -1,8 +1,8 @@
 {
-  "name": "DatabaseProject",
-  "description": "A starter project for AngularJS",
-  "version": "0.0.1",
-  "homepage": "https://github.com.invalid/MichalTuleja/database-project",
+  "name": "ModernPraxis",
+  "description": "AngularJS frontend for Modern Praxis project",
+  "version": "0.0.1-alpha",
+  "homepage": "https://github.com/MichalTuleja/modern-praxis/tree/master/frontend/src",
   "license": "MIT",
   "private": true,
   "dependencies": {
@@ -10,6 +10,7 @@
     "angular-mocks": "~1.4.1",
     "bootstrap": "~3.3.5",
     "angular-route": "~1.4.1",
-    "angular-bootstrap-calendar": "~0.15.4"
+    "angular-bootstrap-calendar": "~0.15.4",
+    "pouchdb": "~5.1.0"
   }
 }
