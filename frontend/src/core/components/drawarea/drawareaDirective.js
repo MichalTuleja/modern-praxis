@@ -1,10 +1,11 @@
 /*global angular*/
 
-var core = angular.module('modernPraxis.core');
+var coreModule = angular.module('modernPraxis.core');
 
-core.directive('mpDrawarea', function() {
+function canvasInit(scope, el) {
     
-    var canvas = document.getElementById('canvasInAPerfectWorld');
+    //var canvas = document.getElementById('canvasInAPerfectWorld');
+    var canvas = $(el).find('canvas')[0];
     var context = canvas.getContext("2d");
     
     /* IE only
@@ -22,27 +23,39 @@ core.directive('mpDrawarea', function() {
     
     */
     
-    canvas.mousedown(function(e){
-      var mouseX = e.pageX - this.offsetLeft;
-      var mouseY = e.pageY - this.offsetTop;
-    		
-      paint = true;
-      addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop);
-      redraw();
-    });
+    function getMousePos(evt) {
+        var rect = canvas.getBoundingClientRect();
+        return {
+          x: evt.clientX - rect.left,
+          y: evt.clientY - rect.top
+        };
+    }
     
-    canvas.mousemove(function(e){
-      if(paint){
-        addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop, true);
+    $(canvas).mousedown(function(e){
+        var mousePos = getMousePos(e);
+        
+        var mouseX = mousePos.x;
+        var mouseY = mousePos.y;
+        	
+        paint = true;
+        addClick(mouseX, mouseY);
         redraw();
-      }
     });
     
-    canvas.mouseup(function(e){
+    $(canvas).mousemove(function(e){
+        if(paint){
+            var mousePos = getMousePos(e);
+            
+            addClick(mousePos.x, mousePos.y, true);
+            redraw();
+        }
+    });
+    
+    $(canvas).mouseup(function(e){
       paint = false;
     });
     
-    canvas.mouseleave(function(e){
+    $(canvas).mouseleave(function(e){
       paint = false;
     });
     
@@ -77,9 +90,15 @@ core.directive('mpDrawarea', function() {
          context.stroke();
       }
     }
+}
 
+coreModule.directive('mpDrawarea', function() {
   return {
     restrict: 'E',
-    templateUrl: 'core/components/drawarea/drawareaDirective.template.html'
+    scope: {
+      label: '@'  
+    },
+    templateUrl: 'core/components/drawarea/drawareaDirective.template.html',
+    link: canvasInit
   };
 });

@@ -1,15 +1,5 @@
-<div class="row">
-  <div class="col-sm-6">
-    <h3>Oko lewe</h3>
-    <p>Stan prawidłowy</p>
-    <data-mp-yes-no-button></data-mp-yes-no-button>
-    <data-mp-textarea></data-mp-textarea>
-    <data-mp-drawarea></data-mp-drawarea>
-  </div>
-  <div class="col-sm-6">
-    <h3>Oko prawe</h3>
-    <p>Stan prawidłowy</p>
-    <data-mp-yes-no-button/>
-    <data-mp-textarea/>
-  </div>
-</div>
+<eye-exam-table 
+  ng-model="examination.posteriorSegment" 
+  typeahead-form-data="examCategories.posteriorSegment" 
+  new-entry="newEntry.twoEyeForm">
+</eye-exam-table>

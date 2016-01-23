@@ -6,7 +6,7 @@ core.directive('mpYesNoButton', function() {
   return {
     restrict: 'E',
     scope: {
-    
+      label: '@'
     },
     templateUrl: 'core/components/yesNoButton/yesNoButtonDirective.template.html'
   };

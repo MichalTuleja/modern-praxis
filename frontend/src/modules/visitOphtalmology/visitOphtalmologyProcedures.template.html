@@ -1,0 +1,43 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th> 
+      <th>ICD-9</th>
+      <th>Opis</th>
+      <th>Actions</th>
+    </tr> 
+  </thead>
+  <tbody>
+    <tr data-ng-repeat="entry in icd9list track by $index">
+      <th scope="row">{{$index + 1}}</th>
+      <td><data-mp-input data-ng-model="entry.code"></data-mp-input></td>
+      <td><data-mp-input data-ng-model="entry.desc"></data-mp-input></td>
+      <td>
+        <a href="" title="Usun"><span class="glyphicon glyphicon-trash"></span></a>  
+        <a href="" data-ng-show="$last" title="Nowy wpis"><span class="glyphicon glyphicon-plus"></span></a>  
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th> 
+      <th>ICD-10</th>
+      <th>Opis</th>
+      <th>Actions</th>
+    </tr> 
+  </thead>
+  <tbody>
+    <tr> 
+      <th scope="row">1</th>
+      <td><data-mp-input>35</data-mp-input></td>
+      <td><data-mp-input>Przykładowy opis</data-mp-input></td>
+      <td>
+        <a href="" title="Support"><span class="glyphicon glyphicon-trash"></span></a>  
+      </td>
+    </tr>
+  </tbody>
+</table>
+

@@ -1,4 +1,11 @@
-<div class="btn-group" role="group">
-  <button type="button" class="btn btn-default">Yes</button>
-  <button type="button" class="btn btn-default">No</button>
+<div class="row">
+  <div class="col-sm-6">
+    <div ng-if="label" class="control-label">{{ label }}</div>
+  </div>
+  <div class="col-sm-6">
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-primary">Yes</button>
+      <button type="button" class="btn btn-default">No</button>
+    </div>
+  </div>
 </div>
