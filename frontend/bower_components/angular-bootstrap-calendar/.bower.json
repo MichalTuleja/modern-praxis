@@ -41,7 +41,6 @@
     "commit": "7514aafbded2ea806f674ac00814b056fcffa1dd"
   },
   "_source": "git://github.com/mattlewis92/angular-bootstrap-calendar.git",
-  "_target": "~0.15.4",
-  "_originalSource": "angular-bootstrap-calendar",
-  "_direct": true
+  "_target": "0.15.4",
+  "_originalSource": "angular-bootstrap-calendar"
 }

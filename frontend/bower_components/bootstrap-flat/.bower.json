@@ -47,7 +47,6 @@
     "commit": "af4e1d80f4c2643782e9ca6d561dadf44a29c1b2"
   },
   "_source": "git://github.com/scottdorman/bootstrap-flat.git",
-  "_target": "~3.3.4",
-  "_originalSource": "bootstrap-flat",
-  "_direct": true
+  "_target": "3.3.4",
+  "_originalSource": "bootstrap-flat"
 }
