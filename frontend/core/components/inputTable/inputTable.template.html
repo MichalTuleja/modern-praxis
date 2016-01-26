@@ -1,0 +1,47 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Nazwa</th>
+      <th>Opis</th>
+      <th></th>
+    </tr>
+  </thead>
+    <tfoot>
+    <tr> 
+      <td></td> 
+      <td ng-if="showName"></td>
+      <td></td>
+      <td></td>
+      <td>
+        <a href="" title="Add" ng-click="addEntry()" class="btn btn-success">
+          <span class="glyphicon glyphicon-plus"></span>
+        </a>
+      </td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr ng-repeat="entry in value track by $index"> 
+      <th scope="row">{{$index + 1}}</th> 
+      <td>
+        <input 
+          type="text" 
+          ng-model="entry.name" 
+          uib-typeahead="entryCat for entryCat in typeaheadFormData | filter:$viewValue | limitTo:8" 
+          class="form-control"
+          tabindex="1_{{$index}}"></input>
+      </td>
+      <td>
+        <mp-multibox 
+          type="text" 
+          ng-model="entry.desc"
+          tabindex="2_{{$index}}"></multibox>
+      </td>
+      <td>
+        <a href="" title="Delete" ng-click="delete($index)" class="btn btn-danger">
+          <span class="glyphicon glyphicon-trash"></span>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -15,7 +15,7 @@ app.get('/api', function (req, res) {
   res.send('Hello World!');
 });
 
-app.use('/', express.static('../../frontend/src'));
+app.use('/', express.static('../../frontend'));
 
 
 app.use('/couchdb', function(req, res) {

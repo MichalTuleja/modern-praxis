@@ -1,0 +1,57 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th> 
+      <th ng-if="showName">Nazwa</th>
+      <th>Prawe oko</th>
+      <th>Lewe oko</th>
+      <th>
+      </th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr> 
+      <td></td> 
+      <td ng-if="showName"></td>
+      <td></td>
+      <td></td>
+      <td>
+        <a href="" title="Add" ng-click="addEntry()" class="btn btn-success">
+          <span class="glyphicon glyphicon-plus"></span>
+        </a>
+      </td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr ng-repeat="entry in value track by $index"> 
+      <th scope="row">{{$index + 1}}</th> 
+      <td ng-if="showName">
+        <input 
+          type="text" 
+          ng-model="entry.name"
+          uib-typeahead="entryCat for entryCat in typeaheadFormData | filter:$viewValue | limitTo:8" 
+          typeahead-show-hint="true" 
+          typeahead-min-length="0"
+          class="form-control"
+          tabindex="1_{{$index}}"></input>
+      </td>
+      <td>
+        <mp-multibox 
+          type="text" 
+          ng-model="entry.rightEye.desc"
+          tabindex="2_{{$index}}"></multibox>
+      </td>
+      <td>
+        <mp-multibox
+          type="text" 
+          ng-model="entry.leftEye.desc"
+          tabindex="3_{{$index}}"></multibox>
+      </td>
+      <td>
+        <a href="" title="Delete" ng-click="delete($index)" class="btn btn-danger">
+          <span class="glyphicon glyphicon-trash"></span>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
