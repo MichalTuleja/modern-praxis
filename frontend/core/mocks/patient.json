@@ -8,28 +8,19 @@
     "phoneNumber": "+48123456789",
     "email": "jan.nowak@example.com",
     "remarks": "",
-    "visits": [
+    "visits": [],
+    "additionalInfo": [
         {
-            "ctime": "",
-            "mtime": "",
-            "date": "2015-07-14",
-            "module": "ophtalmology",
-            "rightEye": "+0.75",
-            "leftEye": "-1.75",
-            "PD": "60",
-            "description": "Badanie nie wykazały żadnych odchyleń od normy, wada refrakcji bez zmian.",
-            "multimedia": []
+          "name": "Imie",
+          "desc": "Jan"
         },
         {
-            "ctime": "",
-            "mtime": "",
-            "date": "2015-01-10",
-            "module": "ophtalmology",
-            "rightEye": "+0.50",
-            "leftEye": "-1.50",
-            "PD": "60",
-            "description": "",
-            "multimedia": []
+          "name": "Nazwisko",
+          "desc": "Nowak"
+        },
+        {
+          "name": "Data urodzenia",
+          "desc": "25.09.1975"
         }
     ]
 }

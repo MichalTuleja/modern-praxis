@@ -11,44 +11,40 @@ patientBasicDataModule.config(
 );
 
 patientBasicDataModule.controller(
-  'PatientBasicDataCtrl', ['$scope', '$location', '$routeParams', 'DataStoreService',
-    function($scope, $location, $routeParams, dataStore) {
+  'PatientBasicDataCtrl', ['$scope', '$rootScope', '$location', '$routeParams', 'DataStoreService',
+    function($scope, $rootScope, $location, $routeParams, dataStore) {
 
+      $scope.patient = {};
       $scope.patient1 = {};
 
       var patientId = $routeParams.id;
 
       dataStore.getPatientById(patientId, function(data) {
-        $scope.patient = data;
+        if(!$scope.$$phase) {
+          $scope.$apply(function() {
+            $scope.patient = data;
+          });
+        }
+        else {
+          $scope.patient = data;
+        }
       });
       
-      $scope.patient1.basicData = [
-        {
-          name: "Imie",
-          desc: "Jan"
-        },
-        {
-          name: "Nazwisko",
-          desc: "Nowak"
-        },
-        {
-          name: "Data urodzenia",
-          desc: "25.09.1975"
-        }
-      ];
-      
-      $scope.basicDataFields = ['Imie', 'Nazwisko', 'Data urodzenia', 'Nr telefonu', 'Email', 'Nr ubezpieczenia'];
-      
-      $scope.newEntry ={
-        basicData:{
-          name: "",
-          desc: ""
+      $scope.customForms = {
+        additionalInfo: {
+          typeahead: ['Imie', 'Nazwisko', 'Data urodzenia', 'Nr telefonu', 'Email', 'Nr ubezpieczenia'],
+          newEntry: {
+            name: "",
+            desc: ""
+          }
         }
       };
       
       $scope.doSave = function() {
-        dataStore.savePatient(patientId, $scope.patient, function() {
-          $location.path('/patient/1/summary');
+        dataStore.savePatient(patientId, $scope.patient, function(data) {
+          $rootScope.$apply(function() {
+            $location.path('/patient/' + data.id + '/summary');
+          });
         });
       };
     }

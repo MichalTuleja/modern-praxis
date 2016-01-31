@@ -12,10 +12,15 @@ patientSummaryModule.config(
 patientSummaryModule.controller(
   'PatientSummaryCtrl', ['$scope', '$routeParams', 'DataStoreService',
     function ($scope, $routeParams, dataStore) {
-      dataStore.getPatientById($routeParams.id, function(data) {
-        $scope.patient = data;
+      var patientId = $routeParams.id;
+      $scope.patientId = patientId;
+      $scope.patient = {};
+      
+      dataStore.getPatientById(patientId, function(data) {
+        $scope.$apply(function() {
+          $scope.patient = data;
+        });
       });
-
     }
   ]
 );

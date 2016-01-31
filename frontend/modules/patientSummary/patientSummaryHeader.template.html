@@ -3,7 +3,7 @@
         <div class="col-sm-6">
             <ul class="list-inline">
                 <li>
-                    <h3><a href="/#/patient/1/summary">{{patient.firstName}} {{patient.lastName}}</a></h3>
+                    <h3><a href="/#/patient/{{ patientId }}/summary">{{patient.firstName}} {{patient.lastName}}</a></h3>
                 </li>
                 <li>
                     <p>{{patient.dateOfBirth}}</p>
@@ -20,7 +20,7 @@
                 </li>
                 <li>
                     <small>
-                        NFZ, Medicover<span style="color:#ddd"> | </span>{{patient.phoneNumber}} <span style="color:#ddd">|</span> <a href="#/patient/1/basic_data">Edit</a>
+                        NFZ, Medicover<span style="color:#ddd"> | </span>{{patient.phoneNumber}} <span style="color:#ddd">|</span> <a href="#/patient/{{ patientId }}/basic_data">Edit</a>
                     </small>
                 </li>
                 
