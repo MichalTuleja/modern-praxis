@@ -48,19 +48,18 @@ dashboardModule.controller('DashboardCtrl', ['$scope', '$location', '$timeout',
                 backgroundColor: '#337ab7',
                 icon: 'glyphicon-plus',
                 url: '/patient/1/basic_data',
-                title: 'Start visit'
-            }, {
+                title: 'Add patient'
+            },{
+                backgroundColor: '#337ab7',
+                icon: 'glyphicon-search',
+                url: '/search/all',
+                title: 'Search'
+            }],
+            [{
                 backgroundColor: '#337ab7',
                 icon: 'glyphicon-calendar',
                 url: '/calendar',
                 title: 'Calendar'
-            }],
-            [{
-                backgroundColor: '#337ab7',
-                icon: 'glyphicon-search',
-                url: null,
-                title: 'Search',
-                click: 'startSearch'
             }, {
                 backgroundColor: '#337ab7',
                 icon: 'glyphicon-cog',

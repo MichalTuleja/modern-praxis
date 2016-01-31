@@ -11,16 +11,12 @@
     "visits": [],
     "additionalInfo": [
         {
-          "name": "Imie",
-          "desc": "Jan"
+          "name": "NFZ",
+          "desc": "do 15.04.2017"
         },
         {
-          "name": "Nazwisko",
-          "desc": "Nowak"
-        },
-        {
-          "name": "Data urodzenia",
-          "desc": "25.09.1975"
+          "name": "Medicover",
+          "desc": "do 31.01.2016"
         }
     ]
 }

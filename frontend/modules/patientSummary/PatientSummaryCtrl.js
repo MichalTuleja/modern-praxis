@@ -10,17 +10,32 @@ patientSummaryModule.config(
   });
 
 patientSummaryModule.controller(
-  'PatientSummaryCtrl', ['$scope', '$routeParams', 'DataStoreService',
-    function ($scope, $routeParams, dataStore) {
+  'PatientSummaryCtrl', ['$scope', '$routeParams', 'DataStoreService', 'visitOphtalmologyService',
+    function ($scope, $routeParams, dataStore, visitOphtalmologySvc) {
       var patientId = $routeParams.id;
       $scope.patientId = patientId;
-      $scope.patient = {};
+      $scope.patientData = {};
       
-      dataStore.getPatientById(patientId, function(data) {
-        $scope.$apply(function() {
-          $scope.patient = data;
+      var getPatientData = function() {
+        dataStore.getPatientById(patientId, function(data) {
+          $scope.$apply(function() {
+            $scope.patientData = data;
+          });
         });
-      });
+      };
+      
+      $scope.addVisit = function() {
+        $scope.patientData.visits.push(visitOphtalmologySvc.newVisit());
+        dataStore.savePatient(patientId, $scope.patientData, function(result) {
+          getPatientData();
+        });
+      };
+      
+      function init() {
+        getPatientData();
+      }
+      
+      init();
     }
   ]
 );

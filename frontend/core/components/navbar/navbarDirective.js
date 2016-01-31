@@ -2,13 +2,14 @@
 
 var coreModule = angular.module('modernPraxis.core');
 
-coreModule.controller('NavbarCtrl', ['$rootScope', '$scope', '$location', '$routeParams', '$http', '$modal', 'searchSvc',
-    function($rootScope, $scope, $location, $routeParams, $http, $modal, searchSvc) {
+coreModule.controller('NavbarCtrl', ['$rootScope', '$scope', '$location', '$routeParams', '$http', '$modal',
+    function($rootScope, $scope, $location, $routeParams, $http, $modal) {
         $scope.searchExpr = {
             text: '',
             pattern: ''
         };
-        
+
+/*        
         $scope.popoverOpen = searchSvc.checkIfOpen();
 
         searchSvc.bindFreeSearch();
@@ -16,7 +17,7 @@ coreModule.controller('NavbarCtrl', ['$rootScope', '$scope', '$location', '$rout
         $scope.openSearch = function() {
             searchSvc.openModal();
         };
-
+*/
         $scope.searchHistory = [{
             appName: 'Janusz Nowak',
             randomId: '62c8c0fe-9520-449e-a198-a1eb35077f49'

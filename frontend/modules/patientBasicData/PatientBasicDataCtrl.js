@@ -32,7 +32,7 @@ patientBasicDataModule.controller(
       
       $scope.customForms = {
         additionalInfo: {
-          typeahead: ['Imie', 'Nazwisko', 'Data urodzenia', 'Nr telefonu', 'Email', 'Nr ubezpieczenia'],
+          typeahead: ['Medicover', 'Luxmed', 'NFZ', 'Inne'],
           newEntry: {
             name: "",
             desc: ""

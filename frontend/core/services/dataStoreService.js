@@ -19,6 +19,8 @@ core.service('DataStoreService', ['$http', function($http) {
     return _p8() + _p8(true) + _p8(true) + _p8();
   }
 
+  this.guid = guid;
+
   this.getPatientById = function(id, cb) {
     if(id === "1") {
       $http.get('core/mocks/patient.json').success(function(data) {
@@ -34,10 +36,19 @@ core.service('DataStoreService', ['$http', function($http) {
   };
   
   this.getAllPatients = function(cb) {
+    patients.allDocs({include_docs: true}).then(function(data) {
+      console.log('Found ' + data.total_rows + ' row(s).');
+      cb(data);
+    }).catch(function (err) {
+      console.log(err);
+    });
+  };
+  
+  this.getPatientsByName = function(name, cb) {
     
   };
   
-  this.getPatientsByName = function(name) {
+  this.newVisit = function(patientId, cb) {
     
   };
   

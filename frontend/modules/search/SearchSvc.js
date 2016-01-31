@@ -1,6 +1,6 @@
 /*global angular*/
 
-angular.module('modernPraxis.search', [])
+angular.module('modernPraxis.search1', [])
 
 .service('searchSvc', function($rootScope, $location, $http, $modal, $timeout) {
 
