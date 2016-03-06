@@ -5,6 +5,7 @@ var core = angular.module('modernPraxis.core');
 core.service('DataStoreService', ['$http', function($http) {
 
   var patients = new PouchDB('patients');
+  var patientsRemote = new PouchDB('http://localhost:5984/patients');
 //  var visits = new PouchDB('visits');
   
   /*
@@ -80,6 +81,21 @@ core.service('DataStoreService', ['$http', function($http) {
       ];
   };
 
-
+  function init() {
+    patients.sync(patientsRemote, {
+      live: true,
+      retry: true
+    }).on('change', function (change) {
+      console.log('patient changed');
+    }).on('paused', function (info) {
+      console.log('sync paused');
+    }).on('active', function (info) {
+      console.log('connection resumed');
+    }).on('error', function (err) {
+      console.log('Unknown error');
+    });
+  }
+  
+  init();
 
 }]);
