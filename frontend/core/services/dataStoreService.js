@@ -44,8 +44,50 @@ core.service('DataStoreService', ['$http', function($http) {
     });
   };
   
-  this.getPatientsByName = function(name, cb) {
+
+  this.getPatientListByName = function(name, cb) {
+    var ddoc = {
+      _id: '_design/index',
+      views: {
+        index: {
+          map: function(doc) {
+            if (doc.lastName) {
+              emit(doc.lastName.toLowerCase())
+            }
+          }.toString()
+        }
+      }
+    }
     
+    patients.put(ddoc).catch(function (err) {
+      if (err.status !== 409) {
+        throw err;
+      }
+      // ignore if doc already exists
+    }).then(function () {
+      patients.query('index', {
+        key: name.toLowerCase(),
+        include_docs: true
+      }).then(function(data) {
+        console.log('Found ' + data.total_rows + ' row(s).');
+        cb(data);
+      }).catch(function (err) {
+        console.log(err);
+      });
+    }).then(function (result) {
+      console.log('Found ' + data.total_rows + ' row(s).');
+      cb(data);
+    }).catch(function (err) {
+      console.log(err);
+    });
+    
+    
+    function searchFunction(doc) {
+      var testExpr = new RegExp(name, 'i');
+      if (testExpr.test(doc.lastName)) {
+        emit(doc.name);
+      }
+    }
   };
   
   this.newVisit = function(patientId, cb) {

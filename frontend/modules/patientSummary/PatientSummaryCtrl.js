@@ -10,8 +10,8 @@ patientSummaryModule.config(
   });
 
 patientSummaryModule.controller(
-  'PatientSummaryCtrl', ['$scope', '$routeParams', 'DataStoreService', 'visitOphtalmologyService',
-    function ($scope, $routeParams, dataStore, visitOphtalmologySvc) {
+  'PatientSummaryCtrl', ['$scope', '$routeParams', '$location', 'DataStoreService', 'visitOphtalmologyService',
+    function ($scope, $routeParams, $location, dataStore, visitOphtalmologySvc) {
       var patientId = $routeParams.id;
       $scope.patientId = patientId;
       $scope.patientData = {};
@@ -28,6 +28,7 @@ patientSummaryModule.controller(
         $scope.patientData.visits.push(visitOphtalmologySvc.newVisit());
         dataStore.savePatient(patientId, $scope.patientData, function(result) {
           getPatientData();
+          $location.path('/patient/' + patientId + '/ophtalmology/' + result.id);
         });
       };
       
