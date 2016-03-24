@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Node.js backend for modern praxis",
   "author": "Michal Tuleja <michal.tuleja@outlook.com>",
-  "main": "src/server.js",
+  "main": "app.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/MichalTuleja/modern-praxis.git"
@@ -23,5 +23,5 @@
   "devDependencies": {
     "http-proxy-middleware": "^0.9.1"
   },
-  "license": "GPL v2"
+  "license": "GPL"
 }
