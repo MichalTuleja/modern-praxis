@@ -2,7 +2,7 @@
   "name": "moder-praxis-backend",
   "version": "0.0.1",
   "description": "Node.js backend for modern praxis",
-  "author": "Michal Tuleja <michal.tuleja@outlook.com>0",
+  "author": "Michal Tuleja <michal.tuleja@outlook.com>",
   "main": "src/server.js",
   "repository": {
     "type": "git",
@@ -15,9 +15,10 @@
     "medical"
   ],
   "dependencies": {
+    "body-parser": "^1.15.0",
     "express": "^4.13.3",
-    "hapi": "^10.1.0",
-    "inert": "^3.0.1"
+    "http-proxy": "^1.13.2",
+    "request": "^2.69.0"
   },
   "devDependencies": {
     "http-proxy-middleware": "^0.9.1"

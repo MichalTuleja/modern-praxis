@@ -3,10 +3,9 @@
 var core = angular.module('modernPraxis.core');
 
 core.service('DataStoreService', ['$http', function($http) {
-
+  
   var patients = new PouchDB('patients');
-  var patientsRemote = new PouchDB('http://localhost:5984/patients');
-//  var visits = new PouchDB('visits');
+  var patientsRemote = new PouchDB('http://localhost:8080/patients');
   
   /*
   This guid should be gahtered from a server with a good random number generator
