@@ -15,7 +15,6 @@ var apiUrl = 'http://127.0.0.1:5984/';
 var apiProxy = httpProxy.createProxyServer();
 
 app.all("/patients/*", function(req, res){ 
-  //console.log(req.url)
   apiProxy.web(req, res, { target: apiUrl });
 });
 
