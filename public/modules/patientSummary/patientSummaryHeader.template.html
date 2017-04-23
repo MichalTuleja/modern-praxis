@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <ul class="list-inline">
+                <li>
+                    <h3><a href="/#/patient/{{ patientId }}/summary">{{personalData.firstName}} {{personalData.lastName}}</a></h3>
+                </li>
+                <li>
+                    <p>{{personalData.dateOfBirth}}</p>
+                </li>
+                <li>
+                    <p>{{personalData.address}}</>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-6">
+            <ul class="list-inline pull-right">
+                <li>
+                    <h3>&nbsp;</h3>
+                </li>
+                <li>
+                    <a href="" ng-click="addVisit()">
+                        <h6>Rozpocznij wizytę</h6>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    <hr style="margin-top: 0px;" />
+</div>

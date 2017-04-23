@@ -1,0 +1,34 @@
+<ng-include src="'modules/patientSummary/patientSummaryHeader.template.html'"></ng-include>
+
+<div class="container">
+  <h4>Dane pacjenta</h4>
+  <hr style="margin-top: 0px;" />
+  <mp-input-table
+    ng-model="patient.personalData"
+    typeahead-form-data="typeaheadPersonal"
+    new-entry="customForms.insurance.basicData"
+    header="false"
+    numbering="false">
+  </mp-input-table>
+
+  <h4>Ubezpieczenie</h4>
+  <hr style="margin-top: 0px;" />
+  <mp-input-table
+    ng-model="patient.insurance"
+    typeahead-form-data="customForms.additionalInfo.typeahead"
+    new-entry="customForms.insurance.basicData"
+    header="false"
+    numbering="false">
+  </mp-input-table>
+
+  <h4>Wizyty</h4>
+  <hr style="margin-top: 0px;" />
+  <div>
+    <a ng-repeat="visit in patient.visits track by $index" href="/#/patient/{{ patientId }}/{{ visit.module }}/{{ visit.id }}">
+      <div class="customSelect">
+        <h4>{{ visit.visitTime | date: 'dd-MM-yyyy' }} <span style="color:grey;font-size:8pt;">{{ visit.visitTime | date: 'HH:mm' }}</span></h4>
+        <p style="padding-left: 3em;color:black;">{{ visit.interview }}</p>
+      </div>
+    </a>
+  </div>
+</div>

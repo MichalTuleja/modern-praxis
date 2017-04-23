@@ -1,4 +1,5 @@
 nbproject/
 .project
 npm-debug.log
-
+node_modules/
+.settings

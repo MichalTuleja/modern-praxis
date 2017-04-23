@@ -1,0 +1,885 @@
+{
+  "id": 1,
+  "personalData": {
+    "firstName": "Jan",
+    "lastName": "Kowalski",
+    "dateOfBirth": "1976-04-23",
+    "citizenship": "Polish",
+    "passportNumber": "1232134532",
+    "phoneNumber": "+48123456789",
+    "email": "jan.nowak@example.com",
+    "remarks": "Dodatkowe informacje o pacjencie"
+  },
+  "visits": [
+    {
+      "id": "261df6bc-d0fc-4755-6792-544e4303c2a3",
+      "firstTime": true,
+      "ctime": "2016-03-29T22:11:40.254Z",
+      "mtime": "2016-03-29T22:11:40.254Z",
+      "visitTime": "2016-03-29T22:11:40.254Z",
+      "interview": "Przykładowy tekst",
+      "module": "opthtalmology",
+      "examination": {
+        "visualAcuity": {
+          "standard": [
+            { 
+              "name": "vsc",
+              "label": "V s.c.",
+              "rightEye": "+0.75",
+              "leftEye": "-0.50"
+            },
+            {
+              "name": "sph",
+              "label": "SPH",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "cyl",
+              "label": "CYL",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "ax",
+              "label": "AX",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "pd",
+              "label": "PD",
+              "value": ""
+            },
+            {
+              "name": "VD",
+              "label": "V s.c.",
+              "value": ""
+            }
+          ],
+          "woAcc": [
+            {
+              "name": "vsc",
+              "label": "V s.c.",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "sph",
+              "label": "SPH",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "cyl",
+              "label": "CYL",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "ax",
+              "label": "AX",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "pd",
+              "label": "PD",
+              "value": ""
+            },
+            {
+              "name": "VD",
+              "label": "V s.c.",
+              "value": ""
+            }
+          ]
+        },
+        "refraction": {
+          "far": [
+            {
+              "name": "vsc",
+              "label": "V s.c.",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "sph",
+              "label": "SPH",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "cyl",
+              "label": "CYL",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "ax",
+              "label": "AX",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "prism",
+              "label": "Pryzma",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "base",
+              "label": "Baza",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "vcor",
+              "label": "V cor",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "pd",
+              "label": "PD",
+              "value": ""
+            }
+          ],
+          "near": [
+            {
+              "name": "vsc",
+              "label": "V s.c.",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "sph",
+              "label": "SPH",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "cyl",
+              "label": "CYL",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "ax",
+              "label": "AX",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "prism",
+              "label": "Pryzma",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "base",
+              "label": "Baza",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "vcor",
+              "label": "V cor",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "pd",
+              "label": "PD",
+              "value": ""
+            }
+          ]
+        },
+        "glasses": {
+          "far": [
+            {
+              "name": "sph",
+              "label": "SPH",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "cyl",
+              "label": "CYL",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "ax",
+              "label": "AX",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "prism",
+              "label": "Pryzma",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "base",
+              "label": "Baza",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "pd",
+              "label": "PD",
+              "value": ""
+            }
+          ],
+          "near": [
+            {
+              "name": "sph",
+              "label": "SPH",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "cyl",
+              "label": "CYL",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "ax",
+              "label": "AX",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "prism",
+              "label": "Pryzma",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "base",
+              "label": "Baza",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "pd",
+              "label": "PD",
+              "value": ""
+            }
+          ]
+        },
+        "posteriorSegment": [
+          {
+            "name": "Opis ogólny",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          },
+          {
+            "name": "Ciało szkliste",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          }
+        ],
+        "tonometry": [
+          {
+            "name": "",
+            "rightEye": "12",
+            "leftEye": "19"
+          },
+          {
+            "name": "",
+            "rightEye": "23",
+            "leftEye": "17"
+          }
+        ],
+        "eyelids": [
+          {
+            "name": "Powieki",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          },
+          {
+            "name": "Spojówki",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          },
+          {
+            "name": "Aparat łzowy",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          },
+          {
+            "name": "Gruczoł",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          },
+          {
+            "name": "Drogi",
+            "rightEye": {
+              "desc": "Przykładowy tekst"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          },
+          {
+            "label": "",
+            "name": "Spojówki gałkowe",
+            "rightEye": {
+              "desc": "Przykładowy tekst"
+            },
+            "leftEye": {
+              "desc": "Przykładowy tekst"
+            }
+          },
+          {
+            "label": "",
+            "name": "Przykładowy tekst",
+            "rightEye": {
+              "desc": "Przykładowy tekst"
+            },
+            "leftEye": {
+              "desc": "Przykładowy tekst"
+            }
+          }
+        ],
+        "anteriorSegment": [
+          {
+            "name": "",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          },
+          {
+            "name": "",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          }
+        ],
+        "lens": [
+          {
+            "name": "",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          },
+          {
+            "name": "",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          }
+        ],
+        "fundus": [
+          {
+            "name": "",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          },
+          {
+            "name": "",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          }
+        ],
+        "others": [
+          {
+            "label": "",
+            "name": "Przykładowy tekst",
+            "rightEye": {
+              "desc": "Przykładowy tekst"
+            },
+            "leftEye": {
+              "desc": "Przykładowy tekst"
+            }
+          }
+        ]
+      },
+      "operation": [],
+      "diagnosis": [],
+      "documents": [],
+      "procedures": {
+        "icd9": [
+          {
+            "name": "01384, Cns TB NEC-cult dx, Other specified tuberculosis of central nervous system, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture",
+            "desc": "Przykładowy tekst"
+          }
+        ],
+        "icd10": [
+          {
+            "name": "A18.5, Tuberculosis of eye",
+            "desc": "Przykładowy tekst"
+          }
+        ]
+      }
+    },
+    {
+      "id": "77a9f2b1-37cd-fd95-e3ae-14c506e119bd",
+      "firstTime": true,
+      "ctime": "2017-04-22T22:59:52.992Z",
+      "mtime": "2017-04-22T22:59:52.992Z",
+      "visitTime": "2017-04-22T22:59:52.992Z",
+      "module": "opthtalmology",
+      "interview": "",
+      "examination": {
+        "visualAcuity": {
+          "standard": [
+            {
+              "name": "vsc",
+              "label": "V s.c.",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "sph",
+              "label": "SPH",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "cyl",
+              "label": "CYL",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "ax",
+              "label": "AX",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "pd",
+              "label": "PD",
+              "value": ""
+            },
+            {
+              "name": "VD",
+              "label": "V s.c.",
+              "value": ""
+            }
+          ],
+          "woAcc": [
+            {
+              "name": "vsc",
+              "label": "V s.c.",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "sph",
+              "label": "SPH",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "cyl",
+              "label": "CYL",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "ax",
+              "label": "AX",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "pd",
+              "label": "PD",
+              "value": ""
+            },
+            {
+              "name": "VD",
+              "label": "V s.c.",
+              "value": ""
+            }
+          ]
+        },
+        "refraction": {
+          "far": [
+            {
+              "name": "vsc",
+              "label": "V s.c.",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "sph",
+              "label": "SPH",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "cyl",
+              "label": "CYL",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "ax",
+              "label": "AX",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "prism",
+              "label": "Pryzma",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "base",
+              "label": "Baza",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "vcor",
+              "label": "V cor",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "pd",
+              "label": "PD",
+              "value": ""
+            }
+          ],
+          "near": [
+            {
+              "name": "vsc",
+              "label": "V s.c.",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "sph",
+              "label": "SPH",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "cyl",
+              "label": "CYL",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "ax",
+              "label": "AX",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "prism",
+              "label": "Pryzma",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "base",
+              "label": "Baza",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "vcor",
+              "label": "V cor",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "pd",
+              "label": "PD",
+              "value": ""
+            }
+          ]
+        },
+        "glasses": {
+          "far": [
+            {
+              "name": "sph",
+              "label": "SPH",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "cyl",
+              "label": "CYL",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "ax",
+              "label": "AX",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "prism",
+              "label": "Pryzma",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "base",
+              "label": "Baza",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "pd",
+              "label": "PD",
+              "value": ""
+            }
+          ],
+          "near": [
+            {
+              "name": "sph",
+              "label": "SPH",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "cyl",
+              "label": "CYL",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "ax",
+              "label": "AX",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "prism",
+              "label": "Pryzma",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "base",
+              "label": "Baza",
+              "rightEye": "",
+              "leftEye": ""
+            },
+            {
+              "name": "pd",
+              "label": "PD",
+              "value": ""
+            }
+          ]
+        },
+        "posteriorSegment": [
+          {
+            "name": "Opis ogólny",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          },
+          {
+            "name": "Ciało szkliste",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          }
+        ],
+        "tonometry": [
+          {
+            "name": "",
+            "rightEye": "12",
+            "leftEye": "19"
+          },
+          {
+            "name": "",
+            "rightEye": "23",
+            "leftEye": "17"
+          }
+        ],
+        "eyelids": [
+          {
+            "name": "Powieki",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          },
+          {
+            "name": "Rzęsy",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          },
+          {
+            "name": "Spojówki",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          },
+          {
+            "name": "Aparat łzowy",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          },
+          {
+            "name": "Gruczoł",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          },
+          {
+            "name": "Drogi",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          }
+        ],
+        "anteriorSegment": [
+          {
+            "name": "",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          },
+          {
+            "name": "",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          }
+        ],
+        "lens": [
+          {
+            "name": "",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          },
+          {
+            "name": "",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          }
+        ],
+        "fundus": [
+          {
+            "name": "",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          },
+          {
+            "name": "",
+            "rightEye": {
+              "desc": "W normie"
+            },
+            "leftEye": {
+              "desc": "W normie"
+            }
+          }
+        ],
+        "others": []
+      },
+      "operation": [],
+      "diagnosis": [],
+      "documents": [],
+      "procedures": {
+        "icd9": [],
+        "icd10": []
+      }
+    }
+  ],
+  "insurance": {
+    "NFZ": "do 15.04.2017",
+    "Medicover": "do 31.01.2016"
+  }
+}
