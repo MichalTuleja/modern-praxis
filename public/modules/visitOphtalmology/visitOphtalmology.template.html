@@ -1,35 +1,27 @@
-<ng-include src="'modules/patientSummary/patientSummaryHeader.template.html'"></ng-include>
-
 <div class="container">
-    
-    <tabset justified="true">
-        <tab heading="Wywiad">
-            <ng-include src="'modules/visitOphtalmology/visitOphtalmologyInterview.template.html'"></ng-include>
-        </tab>
+    <ng-include src="'modules/patientSummary/patientSummaryHeader.template.html'"></ng-include>
 
-        <tab heading="Badania">
-            <ng-include src="'modules/visitOphtalmology/visitOphtalmologyExamination.template.html'"></ng-include>
-        </tab>
-        
-        <tab heading="Zabiegi">
-            <ng-include src="'modules/visitOphtalmology/visitOphtalmologyOperation.template.html'"></ng-include>
-        </tab>
+    <h3>Wywiad wstępny</h3>
+    <hr style="margin-top: 0px;" />
+    <ng-include src="'modules/visitOphtalmology/visitOphtalmologyInterview.template.html'"></ng-include>
 
-        <tab heading="Procedury">
-            <ng-include src="'modules/visitOphtalmology/visitOphtalmologyProcedures.template.html'"></ng-include>
-        </tab>
-        
-        <tab heading="Diagnoza">
-            <ng-include src="'modules/visitOphtalmology/visitOphtalmologyDiagnosis.template.html'"></ng-include>
-        </tab>
+    <h3>Badania</h3>
+    <hr style="margin-top: 0px;" />
+    <ng-include src="'modules/visitOphtalmology/visitOphtalmologyExamination.template.html'"></ng-include>
 
-        <tab heading="Zalecenia">
-            <ng-include src="'modules/visitOphtalmology/visitOphtalmologyDocuments.template.html'"></ng-include>
-        </tab>
+    <h3>Zabiegi</h3>
+    <hr style="margin-top: 0px;" />
+    <ng-include src="'modules/visitOphtalmology/visitOphtalmologyOperation.template.html'"></ng-include>
 
-        <tab heading="Podsumowanie" active="true">
-            <ng-include src="'modules/visitOphtalmology/visitOphtalmologySummary.template.html'"></ng-include>
-        </tab>
-    </tabset>
+    <h3>Procedury</h3>
+    <hr style="margin-top: 0px;" />
+    <ng-include src="'modules/visitOphtalmology/visitOphtalmologyProcedures.template.html'"></ng-include>
 
+    <h3>Diagnoza</h3>
+    <hr style="margin-top: 0px;" />
+    <ng-include src="'modules/visitOphtalmology/visitOphtalmologyDiagnosis.template.html'"></ng-include>
+
+    <h3>Zalecenia</h3>
+    <hr style="margin-top: 0px;" />
+    <ng-include src="'modules/visitOphtalmology/visitOphtalmologyDocuments.template.html'"></ng-include>
 </div>

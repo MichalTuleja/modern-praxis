@@ -10,7 +10,10 @@ core.directive('mpEyeExamTable', function() {
       value: '=ngModel',
       newEntry: '=',
       typeaheadFormData: '=',
-      showName: '='
+      showName: '=',
+      header: '=',
+      counter: '=',
+      numbering: '='
     },
     link: function(scope, element, attr) {
       scope.showName = scope.showName === undefined ? true : scope.showName;

@@ -1,28 +1,40 @@
-<div class="row">
-    <div class="col-sm-8">
-        <div class="row">
-            <h4 class="col-sm-6 col-sm-offset-6">OP</h4>
-        </div>
-        <form class="form-horizontal">
-            <div class="form-group" ng-repeat="entry in value track by $index">
-                <label class="col-sm-6 control-label">{{ entry.label }}</label>
-                <div class="col-sm-6">
-                    <input class="form-control" ng-if="entry.rightEye !== undefined" placeholder="" ng-model="entry.rightEye">
-                    <input class="form-control" ng-if="entry.value !== undefined" placeholder="" ng-model="entry.value">
-                </div>
-            </div>
-        </form>
-    </div>
-    <div class="col-sm-4">
-        <div class="row">
-            <h4 class="col-sm-12">OL</h4>
-        </div>
-        <form class="form-horizontal">
-            <div class="form-group" ng-repeat="entry in value track by $index">
-                <div class="col-sm-12">
-                    <input class="form-control"  placeholder="" ng-if="entry.leftEye !== undefined" ng-model="entry.leftEye">
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th ng-if="counter">#</th> 
+      <th style="min-width: 9em;">{{ title }}</th>
+      <th>Prawe oko</th>
+      <th>Lewe oko</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="entry in value track by $index"> 
+      <th scope="row" ng-if="counter">{{$index + 1}}</th> 
+      <td>
+          {{ entry.label }}
+      </td>
+      <td>
+        <input 
+          class="form-control flat"
+          ng-if="entry.rightEye !== undefined"
+          ng-model="entry.rightEye"
+          placeholder=""
+          tabindex="2_{{$index}}"></input>
+        <input 
+          class="form-control flat"
+          ng-if="entry.value !== undefined"
+          ng-model="entry.value"
+          placeholder=""
+          tabindex="2_{{$index}}"></input>
+      </td>
+      <td>
+        <input
+          class="form-control flat"
+          ng-if="entry.leftEye !== undefined"
+          ng-model="entry.leftEye"
+          placeholder=""
+          tabindex="3_{{$index}}"></input>
+      </td>
+    </tr>
+  </tbody>
+</table>

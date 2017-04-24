@@ -1,7 +1,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>#</th> 
+      <th ng-if="counter">#</th> 
       <th ng-if="showName">Nazwa</th>
       <th>Prawe oko</th>
       <th>Lewe oko</th>
@@ -11,12 +11,12 @@
   </thead>
   <tfoot>
     <tr> 
-      <td></td> 
+      <td ng-if="counter"></td> 
       <td ng-if="showName"></td>
       <td></td>
       <td></td>
       <td>
-        <a href="" title="Add" ng-click="addEntry()" class="btn btn-success">
+        <a href="" title="Add" ng-click="addEntry()" class="">
           <span class="glyphicon glyphicon-plus"></span>
         </a>
       </td>
@@ -24,7 +24,7 @@
   </tfoot>
   <tbody>
     <tr ng-repeat="entry in value track by $index"> 
-      <th scope="row">{{$index + 1}}</th> 
+      <th scope="row" ng-if="counter">{{$index + 1}}</th> 
       <td ng-if="showName">
         <input 
           type="text" 
@@ -32,23 +32,23 @@
           uib-typeahead="entryCat for entryCat in typeaheadFormData | filter:$viewValue | limitTo:8" 
           typeahead-show-hint="true" 
           typeahead-min-length="0"
-          class="form-control"
+          class="form-control flat"
           tabindex="1_{{$index}}"></input>
       </td>
       <td>
-        <mp-multibox 
-          type="text" 
+        <input 
+          class="form-control flat"
           ng-model="entry.rightEye.desc"
-          tabindex="2_{{$index}}"></multibox>
+          tabindex="2_{{$index}}"></input>
       </td>
       <td>
-        <mp-multibox
-          type="text" 
+        <input
+          class="form-control flat"
           ng-model="entry.leftEye.desc"
-          tabindex="3_{{$index}}"></multibox>
+          tabindex="3_{{$index}}"></input>
       </td>
       <td>
-        <a href="" title="Delete" ng-click="delete($index)" class="btn btn-danger">
+        <a href="" title="Delete" ng-click="delete($index)" class="">
           <span class="glyphicon glyphicon-trash"></span>
         </a>
       </td>

@@ -9,7 +9,8 @@ core.directive('mpOpticsForm', function() {
       label: '@',
       value: '=ngModel',
       newEntry: '=',
-      typeaheadFormData: '='
+      typeaheadFormData: '=',
+      title: '@'
     },
     link: function(scope, element, attr) {
     },
